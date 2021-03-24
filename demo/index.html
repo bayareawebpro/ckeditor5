@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"></html>
+<head>
+    <title>CKEditor 5 ClassicEditor build</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body data-editor="ClassicEditor" data-collaboration="false">
+<div class="editor"></div>
+<script src="../build/ckeditor.js"></script>
+<script>
+    ClassicEditor
+        .create(document.querySelector('.editor'), {
+
+		})
+        .then(editor => window.editor = editor)
+        .catch(console.error);
+</script>
+</body>
