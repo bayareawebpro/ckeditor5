@@ -34,6 +34,7 @@ import Superscript from '@ckeditor/ckeditor5-basic-styles/src/superscript'
 import Subscript from '@ckeditor/ckeditor5-basic-styles/src/subscript'
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice'
 import InsertSnippet from "./plugins/InsertSnippet"
+import Mention from "@ckeditor/ckeditor5-mention/src/mention"
 
 export default class Editor extends ClassicEditorBase {}
 
@@ -46,11 +47,13 @@ Editor.defaultConfig = {
 	...require('./config/media').default,
 	...require('./config/table').default,
 	...require('./config/headings').default,
+	...require('./config/mentions').default,
 	...require('./config/toolbar').default,
 }
 // Plugins to include in the build.
 Editor.builtinPlugins = [
 	Essentials,
+	Mention,
 	InsertSnippet,
 	Heading,
 	Paragraph,
