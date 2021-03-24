@@ -5,7 +5,6 @@ export default class MediaBrowser{
         this.config = editor.config;
         this.model = editor.model;
         this.ui = editor.ui;
-        console.log( this.ui )
     }
 
     /**

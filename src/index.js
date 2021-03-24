@@ -33,12 +33,14 @@ import StrikeThrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough'
 import Superscript from '@ckeditor/ckeditor5-basic-styles/src/superscript'
 import Subscript from '@ckeditor/ckeditor5-basic-styles/src/subscript'
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice'
+import InsertSnippet from "./plugins/InsertSnippet"
 
 export default class Editor extends ClassicEditorBase {}
 
 Editor.defaultConfig = {
 	licenseKey: '',
 	language: 'en',
+	snippetBrowser: true,
 	...require('./config/link').default,
 	...require('./config/image').default,
 	...require('./config/media').default,
@@ -46,10 +48,10 @@ Editor.defaultConfig = {
 	...require('./config/headings').default,
 	...require('./config/toolbar').default,
 }
-
 // Plugins to include in the build.
 Editor.builtinPlugins = [
 	Essentials,
+	InsertSnippet,
 	Heading,
 	Paragraph,
 	Link,

@@ -46,5 +46,8 @@
   "scripts": {
     "prod": "webpack --mode production",
     "dev": "webpack --mode development"
+  },
+  "dependencies": {
+    "@ckeditor/ckeditor5-core": "^27.0.0"
   }
 }

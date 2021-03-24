@@ -21,7 +21,7 @@ export default {
             '|',
             'mediaEmbed',
             //'mediaBrowser',
-            //'insertSnippet',
+            'insertSnippet',
             '|',
             'undo',
             'redo'
