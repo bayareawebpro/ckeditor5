@@ -35,9 +35,9 @@ import Subscript from '@ckeditor/ckeditor5-basic-styles/src/subscript'
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice'
 import InsertSnippet from "./plugins/InsertSnippet"
 import Mention from "@ckeditor/ckeditor5-mention/src/mention"
+import MentionCustomizer from "./plugins/MentionCustomizer"
 
 export default class Editor extends ClassicEditorBase {}
-
 Editor.defaultConfig = {
 	licenseKey: '',
 	language: 'en',
@@ -54,6 +54,7 @@ Editor.defaultConfig = {
 Editor.builtinPlugins = [
 	Essentials,
 	Mention,
+	MentionCustomizer,
 	InsertSnippet,
 	Heading,
 	Paragraph,
