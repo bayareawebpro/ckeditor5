@@ -6,7 +6,7 @@ Includes custom plugins for setting up external methods to insert content into t
 - Insert Images
 - Insert Snippets
 
-- https://github.com/ckeditor/ckeditor5-vue
+> Use with the Vue Component: https://github.com/ckeditor/ckeditor5-vue
 
 ```html
 <textarea class="editor"></textarea>
