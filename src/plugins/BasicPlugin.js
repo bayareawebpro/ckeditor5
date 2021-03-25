@@ -25,6 +25,9 @@ export default class BasicPlugin extends Plugin {
     get icon(){
         return ``
     }
+    get enabled(){
+        return this.editor.config.get(this.name)
+    }
 
     /**
      * Write Document Content.
@@ -39,6 +42,7 @@ export default class BasicPlugin extends Plugin {
             icon: this.icon
         })
         view.on('execute', this.execute.bind(this))
+        view.set('isVisible', this.enabled)
         return view
     }
 
@@ -46,23 +50,19 @@ export default class BasicPlugin extends Plugin {
      * Launch the Link Browser.
      */
     execute() {
-        this.writeContent()
+        const config = this.editor.config.get(this.name)
+        console.log(config)
+        if(typeof config.handler === 'function'){
+            return config.handler(this.writeContent.bind(this))
+        }
+        console.error(`No ${this.name} method configured.`)
     }
 
     /**
      * Write Document Content.
      * @return void
      */
-    writeContent(snippet = '<h1>Test</h1>') {
+    writeContent(snippet = '<br/><h1>Test</h1>') {
         this.editor.model.insertContent(this.editor.data.toModel(this.editor.data.processor.toView(snippet)));
-    }
-
-    /**
-     * Destroy Instance
-     * Stop listening for events.
-     * @return void
-     */
-    destroy() {
-
     }
 }

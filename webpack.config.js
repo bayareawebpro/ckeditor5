@@ -9,7 +9,7 @@ module.exports = {
 	performance: { hints: false },
 	entry: path.resolve( __dirname, 'src', 'index.js' ),
 	output: {
-		library: 'ClassicEditor',
+		library: 'CkEditor',
 		path: path.resolve( __dirname, 'build' ),
 		filename: 'ckeditor.js',
 		libraryTarget: 'window',

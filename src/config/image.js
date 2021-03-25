@@ -7,20 +7,20 @@ export default {
             types: ['gif','png','jpg','jpeg']
         },
         toolbar: [
-            'mediaBrowser',
             'imageStyle:full',
             //'imageStyle:side',
             'imageStyle:alignLeft',
             'imageStyle:alignCenter',
             'imageStyle:alignRight',
             'imageTextAlternative',
+            'insertImages',
         ],
         styles: [
+            'full',
+            //'side',
             'alignLeft',
             'alignCenter',
             'alignRight',
-            'full',
-            //'side',
         ]
     }
 }

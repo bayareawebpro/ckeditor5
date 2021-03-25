@@ -17,7 +17,7 @@ export default {
                 mode: 'manual',
                 label: 'No Follow',
                 attributes: {
-                    rel: 'nofollow'
+                    rel: 'noopener nofollow'
                 }
             },
         }
