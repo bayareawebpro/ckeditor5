@@ -6,10 +6,12 @@ import ClassicEditorBase from '@ckeditor/ckeditor5-editor-classic/src/classicedi
 
 import Image from '@ckeditor/ckeditor5-image/src/image'
 import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle'
+import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize'
 import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption'
 import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar'
 import ImageTextAlternative from '@ckeditor/ckeditor5-image/src/imagetextalternative'
 import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed'
+import HtmlEmbed from '@ckeditor/ckeditor5-html-embed/src/htmlembed'
 
 import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials'
 import HorizontalLine from '@ckeditor/ckeditor5-horizontal-line/src/horizontalline'
@@ -43,6 +45,7 @@ Editor.defaultConfig = {
 	licenseKey: '',
 	language: 'en',
 	...require('./config/link').default,
+	...require('./config/html').default,
 	...require('./config/image').default,
 	...require('./config/media').default,
 	...require('./config/table').default,
@@ -74,11 +77,13 @@ Editor.builtinPlugins = [
 	AutoFormat,
 	PasteFromOffice,
 	Image,
+	ImageResize,
 	ImageStyle,
 	ImageCaption,
 	ImageToolbar,
 	ImageTextAlternative,
 	MediaEmbed,
+	HtmlEmbed
 ]
 
 export default {

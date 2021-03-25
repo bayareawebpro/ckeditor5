@@ -3,10 +3,8 @@
  */
 export default {
     image:{
-        upload: {
-            types: ['gif','png','jpg','jpeg']
-        },
         toolbar: [
+            'resizeImage',
             'imageStyle:full',
             //'imageStyle:side',
             'imageStyle:alignLeft',
@@ -21,6 +19,23 @@ export default {
             'alignLeft',
             'alignCenter',
             'alignRight',
+        ],
+        resizeOptions: [
+            {
+                name: 'resizeImage:original',
+                value: null,
+                label: 'Original'
+            },
+            {
+                name: 'resizeImage:50',
+                value: '50',
+                label: '50%'
+            },
+            {
+                name: 'resizeImage:75',
+                value: '75',
+                label: '75%'
+            }
         ]
     }
 }
