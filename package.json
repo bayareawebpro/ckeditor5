@@ -1,10 +1,10 @@
 {
-  "name": "ckeditor5-classic-custom",
+  "name": "@bayareawebpro/ckeditor5-classic-custom",
   "version": "1.0.0",
   "description": "A custom build of CkEditor5 Classic with plugins for inserting editor content.",
   "author": "Daniel Alvidrez",
   "license": "MIT",
-  "module": "build/index.js",
+  "module": "build/ckeditor.js",
   "files": [
     "src",
     "build"
@@ -45,5 +45,15 @@
   "scripts": {
     "prod": "webpack --mode production",
     "dev": "webpack --mode development"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/bayareawebpro/ckeditor5/issues"
+  },
+  "homepage": "https://github.com/bayareawebpro/ckeditor5#readme",
+  "main": "build/ckeditor.js",
+  "dependencies": {
+  },
+  "keywords": [
+    "CkEditor5"
+  ]
 }
