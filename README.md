@@ -6,11 +6,13 @@ Includes custom plugins for setting up external methods to insert content into t
 - Insert Images
 - Insert Snippets
 
+- https://github.com/ckeditor/ckeditor5-vue
+
 ```html
 <textarea class="editor"></textarea>
-<script src="../build/ckeditor.js"></script>
 <script>
-    CkEditor.Editor
+    import {Editor} from '@bayareawebpro/ckeditor5-classic-custom'
+    Editor
         .create(document.querySelector('.editor'), {
             insertLinks: {
                 handler: (write) => write({title: 'Custom Link', url: '/my-url/'})
