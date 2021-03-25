@@ -12,7 +12,7 @@ module.exports = {
 		library: 'CkEditor',
 		path: path.resolve( __dirname, 'build' ),
 		filename: 'ckeditor.js',
-		libraryTarget: 'window',
+		libraryTarget: 'umd',
 		libraryExport: 'default'
 	},
 	optimization: {
