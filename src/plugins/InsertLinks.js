@@ -14,8 +14,7 @@ export default class InsertLinks extends BasicPlugin {
         this.editor.model.change(writer => {
             this.editor.model.insertContent(writer.createText(this.selectedText || link.title, {
                 linkHref: link.url,
-                linkTitle: link.title,
-                linkTarget: '_blank'
+                linkTitle: link.title
             }),this.editor.model.document.selection)
         })
     }

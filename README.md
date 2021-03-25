@@ -1,19 +1,25 @@
 # CKEditor5
 
+Includes custom plugins for setting up external methods to insert content into the editor: 
+
+- Insert Links
+- Insert Images
+- Insert Snippets
+
 ```html
-<div class="editor"></div>
+<textarea class="editor"></textarea>
 <script src="../build/ckeditor.js"></script>
 <script>
-    ClassicEditor
+    CkEditor.Editor
         .create(document.querySelector('.editor'), {
             insertLinks: {
                 handler: (write) => write({title: 'Custom Link', url: '/my-url/'})
             },
             insertImages: {
-                handler: (write) => write({url: 'https://images.unsplash.com/photo-1593642533144-3d62aa4783ec', caption: 'test'})
+                handler: (write) => write({url: 'https://images.unsplash.com/photo-1593642533144-3d62aa4783ec'})
             },
             insertSnippets: {
-                handler:(write) => write('<h1>Snippet</h1>')
+                handler:(write) => write('<figure class="image"><img src="https://images.unsplash.com/photo-1593642533144-3d62aa4783ec"></figure>')
             },
             toolbar: {
                 items: [
@@ -43,7 +49,7 @@
                     'redo'
                 ]
             },
-		})
+        })
         .then(editor => window.editor = editor)
         .catch(console.error);
 </script>

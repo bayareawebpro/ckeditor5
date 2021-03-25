@@ -51,7 +51,7 @@
                 handler: (write) => write({url: 'https://images.unsplash.com/photo-1593642533144-3d62aa4783ec', caption: 'test'})
             },
             insertSnippets: {
-                handler:(write) => write('<br/><h1>Snippet</h1>')
+                handler:(write) => write('<h1>Snippet</h1>')
             },
         })
         .then(editor => window.editor = editor)
