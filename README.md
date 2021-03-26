@@ -1,5 +1,7 @@
 # CKEditor5
 
+`npm install @bayareawebpro/ckeditor5-classic-custom --save-dev`
+
 Includes custom plugins for setting up external methods to insert content into the editor: 
 
 - Insert Links
