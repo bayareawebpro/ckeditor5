@@ -17,6 +17,7 @@ export default {
             'numberedList',
             'horizontalLine',
             '|',
+            'htmlEmbed',
             'insertTable',
             'mediaEmbed',
             'insertLinks',
