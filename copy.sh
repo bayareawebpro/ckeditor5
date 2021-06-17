@@ -1,0 +1,1 @@
+cp ~/Sites/ckeditor5/build/ckeditor.js ~/Sites/admin-panel/node_modules/@bayareawebpro/ckeditor5-classic-custom/build/ckeditor.js
