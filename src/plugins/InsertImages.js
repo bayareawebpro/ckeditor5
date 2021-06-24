@@ -12,7 +12,8 @@ export default class InsertImages extends BasicPlugin {
     }
     writeContent(items){
         items = Array.isArray(items) ? items : [items]
-        const selected = this.editor.model.document.selection.getSelectedElement()
+        const selected = this.selection.getSelectedElement()
+
         this.editor.model.change(writer => {
             if(selected && selected.name === 'image') {
                 const firstItem = items.shift()
@@ -21,7 +22,7 @@ export default class InsertImages extends BasicPlugin {
             items.forEach((item)=>{
                 this.editor.model.insertContent(
                     writer.createElement('image', {src: item.url, caption: 'test'}),
-                    this.editor.model.document.selection.getLastPosition()
+                    this.selection.getLastPosition()
                 )
             })
         })

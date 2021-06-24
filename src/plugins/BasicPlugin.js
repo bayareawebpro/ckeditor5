@@ -37,6 +37,7 @@ export default class BasicPlugin extends Plugin {
     execute() {
         const config = this.editor.config.get(this.name)
         if(typeof config.handler === 'function'){
+            this.selection = this.editor.model.document.selection
             return config.handler(this.writeContent.bind(this))
         }
         console.error(`No ${this.name} method configured.`)
