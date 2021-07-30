@@ -15,13 +15,16 @@ export default class InsertImages extends BasicPlugin {
         const selected = this.selection.getSelectedElement()
 
         this.editor.model.change(writer => {
+
+            //super.writeContent(`<div class="raw-html-embed"><video controls src="${item.url}"></video></div>`)
+
             if(selected && selected.name === 'image') {
                 const firstItem = items.shift()
                 writer.setAttributes({src: firstItem.url}, selected)
             }
             items.forEach((item)=>{
                 this.editor.model.insertContent(
-                    writer.createElement('image', {src: item.url, caption: 'test'}),
+                    writer.createElement('image', {src: item.url}),
                     this.selection.getLastPosition()
                 )
             })

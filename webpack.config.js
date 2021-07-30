@@ -5,6 +5,7 @@ const CKEditorWebpackPlugin = require( '@ckeditor/ckeditor5-dev-webpack-plugin' 
 const TerserWebpackPlugin = require( 'terser-webpack-plugin' );
 
 module.exports = {
+	//watch: true,
 	devtool: 'source-map',
 	performance: { hints: false },
 	entry: path.resolve( __dirname, 'src', 'index.js' ),

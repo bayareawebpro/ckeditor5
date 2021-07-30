@@ -35,14 +35,14 @@ import StrikeThrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough'
 import AutoFormat from '@ckeditor/ckeditor5-autoformat/src/autoformat'
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice'
 
-import BasicPlugin from './plugins/BasicPlugin'
-import InsertSnippets from './plugins/InsertSnippets'
-import InsertImages from './plugins/InsertImages'
 import InsertLinks from './plugins/InsertLinks'
+import BasicPlugin from './plugins/BasicPlugin'
+import InsertImages from './plugins/InsertImages'
+import PluginFactory from './plugins/PluginFactory'
 
 class Editor extends ClassicEditorBase {}
 Editor.defaultConfig = {
-	licenseKey: '',
+	//licenseKey: '',
 	language: 'en',
 	...require('./config/link').default,
 	...require('./config/html').default,
@@ -54,7 +54,7 @@ Editor.defaultConfig = {
 }
 // Plugins to include in the build.
 Editor.builtinPlugins = [
-	InsertSnippets,
+	PluginFactory,
 	InsertImages,
 	InsertLinks,
 	Essentials,

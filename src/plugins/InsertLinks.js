@@ -15,13 +15,20 @@ export default class InsertLinks extends BasicPlugin {
     }
 
     writeContent(links) {
+        this.selectedText = (this.editor.model.getSelectedContent(this.selection).getChild(0) || {data: null}).data
+
+        //const elementName = (this.editor.model.document.selection.getSelectedElement() || {name: null}).name
+
         this.editor.model.change(writer => {
+
             (Array.isArray(links) ? links : [links]).forEach((link, index) => {
-                if (index === 0 && this.selectedText) {
-                    this.insertContent(writer, this.selectedText, link.title, link.url, this.selection)
-                } else {
-                    this.editor.execute('enter')
-                    this.insertContent(writer, link.title, link.title, link.url, this.selection)
+
+                const title = (index === 0 && this.selectedText) ? this.selectedText : link.title
+
+                this.insertContent(writer,title, link.title, link.url, this.editor.model.document.selection)
+
+                if(!this.selectedText && (index < links.length - 1)){
+                    this.editor.execute('enter');
                 }
             })
         })
@@ -29,9 +36,5 @@ export default class InsertLinks extends BasicPlugin {
 
     insertContent(writer, text, title, url, selection) {
         this.editor.model.insertContent(writer.createText(text, {linkTitle: title, linkHref: url}), selection)
-    }
-
-    get selectedText() {
-        return (this.editor.model.getSelectedContent(this.selection).getChild(0) || {data: null}).data
     }
 }
