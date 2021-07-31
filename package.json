@@ -1,6 +1,6 @@
 {
   "name": "@bayareawebpro/ckeditor5-classic-custom",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "A custom build of CkEditor5 Classic with plugins for inserting editor content.",
   "author": "Daniel Alvidrez",
   "license": "MIT",
