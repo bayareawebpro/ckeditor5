@@ -2,6 +2,7 @@ export default {
     toolbar: {
         items: [
             'heading',
+            'alignment',
             'link',
             'bold',
             'italic',
@@ -9,17 +10,13 @@ export default {
             'superscript',
             'underline',
             'strikethrough',
-            'alignment',
             'blockQuote',
             'bulletedList',
             'numberedList',
             'horizontalLine',
             'insertTable',
-            'insertLinks',
-            'insertImages',
             'mediaEmbed',
             'htmlEmbed',
-            'myPlugin',
             'undo',
             'redo'
         ]

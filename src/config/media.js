@@ -14,10 +14,9 @@ export default {
                     /^https:\/\/www\.youtu\.be\/([\w-]+)/
                 ],
                 html: match => `
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <iframe src="https://www.youtube.com/embed/${match[1]}" class="embed-responsive-item" allowfullscreen></iframe>
-                        </div>
-                   `
+                <div class="aspect-w-16 aspect-h-9">
+                  <iframe src="https://www.youtube.com/embed/${match[1]}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>`
             },
         ]
     },

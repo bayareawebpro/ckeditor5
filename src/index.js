@@ -18,6 +18,8 @@ import HorizontalLine from '@ckeditor/ckeditor5-horizontal-line/src/horizontalli
 import BlockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote'
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment'
 import Heading from '@ckeditor/ckeditor5-heading/src/heading'
+import TableProperties from '@ckeditor/ckeditor5-table/src/tableproperties'
+import TableCellProperties from '@ckeditor/ckeditor5-table/src/tablecellproperties'
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar'
 import Table from '@ckeditor/ckeditor5-table/src/table'
 import List from '@ckeditor/ckeditor5-list/src/list'
@@ -35,14 +37,10 @@ import StrikeThrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough'
 import AutoFormat from '@ckeditor/ckeditor5-autoformat/src/autoformat'
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice'
 
-import InsertLinks from './plugins/InsertLinks'
-import BasicPlugin from './plugins/BasicPlugin'
-import InsertImages from './plugins/InsertImages'
 import PluginFactory from './plugins/PluginFactory'
 
 class Editor extends ClassicEditorBase {}
 Editor.defaultConfig = {
-	//licenseKey: '',
 	language: 'en',
 	...require('./config/link').default,
 	...require('./config/html').default,
@@ -55,13 +53,10 @@ Editor.defaultConfig = {
 // Plugins to include in the build.
 Editor.builtinPlugins = [
 	PluginFactory,
-	InsertImages,
-	InsertLinks,
 	Essentials,
 	Link,
 	Bold,
 	List,
-	Table,
 	Italic,
 	Indent,
 	Heading,
@@ -73,9 +68,12 @@ Editor.builtinPlugins = [
 	Superscript,
 	StrikeThrough,
 	HorizontalLine,
-	TableToolbar,
 	AutoFormat,
 	PasteFromOffice,
+	Table,
+	TableToolbar,
+	TableProperties,
+	TableCellProperties,
 	Image,
 	ImageResize,
 	ImageStyle,
@@ -88,5 +86,4 @@ Editor.builtinPlugins = [
 
 export default {
 	Editor,
-	BasicPlugin,
 }
