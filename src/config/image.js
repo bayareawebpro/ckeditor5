@@ -6,11 +6,13 @@ export default {
         toolbar: [
             'resizeImage',
             'imageStyle:full',
+            'imageStyle:block',
             'imageStyle:alignLeft',
             'imageStyle:alignCenter',
             'imageStyle:alignRight',
             'imageTextAlternative',
-            'insertImages',
+            'toggleImageCaption',
+            'linkImage',
         ],
         styles: [
             'full',
@@ -53,6 +55,41 @@ export default {
                 name: 'resizeImage:50',
                 value: '50',
                 label: '50%'
+            },
+            {
+                name: 'resizeImage:40',
+                value: '40',
+                label: '40%'
+            },
+            {
+                name: 'resizeImage:35',
+                value: '35',
+                label: '35%'
+            },
+            {
+                name: 'resizeImage:30',
+                value: '30',
+                label: '30%'
+            },
+            {
+                name: 'resizeImage:25',
+                value: '25',
+                label: '25%'
+            },
+            {
+                name: 'resizeImage:20',
+                value: '20',
+                label: '20%'
+            },
+            {
+                name: 'resizeImage:15',
+                value: '15',
+                label: '15%'
+            },
+            {
+                name: 'resizeImage:10',
+                value: '20',
+                label: '10%'
             },
         ]
     }

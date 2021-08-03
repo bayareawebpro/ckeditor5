@@ -25,6 +25,7 @@ import Table from '@ckeditor/ckeditor5-table/src/table'
 import List from '@ckeditor/ckeditor5-list/src/list'
 
 import Link from '@ckeditor/ckeditor5-link/src/link'
+import LinkImage from '@ckeditor/ckeditor5-link/src/linkimage'
 import Indent from '@ckeditor/ckeditor5-indent/src/indent'
 import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold'
 import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic'
@@ -55,6 +56,7 @@ Editor.builtinPlugins = [
 	PluginFactory,
 	Essentials,
 	Link,
+	LinkImage,
 	Bold,
 	List,
 	Italic,
