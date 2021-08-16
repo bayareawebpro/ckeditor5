@@ -6,7 +6,6 @@ export default {
         toolbar: [
             'resizeImage',
             'imageStyle:full',
-            'imageStyle:block',
             'imageStyle:alignLeft',
             'imageStyle:alignCenter',
             'imageStyle:alignRight',
@@ -15,7 +14,6 @@ export default {
         ],
         styles: [
             'full',
-            'block',
             'alignLeft',
             'alignCenter',
             'alignRight',
