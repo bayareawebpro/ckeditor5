@@ -11,11 +11,11 @@ export default {
             'imageStyle:alignCenter',
             'imageStyle:alignRight',
             'imageTextAlternative',
-            'toggleImageCaption',
             'linkImage',
         ],
         styles: [
             'full',
+            'block',
             'alignLeft',
             'alignCenter',
             'alignRight',
