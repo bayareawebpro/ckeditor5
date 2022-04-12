@@ -44,9 +44,8 @@
     "webpack-cli": "^3.3.11"
   },
   "scripts": {
-    "prod": "webpack --mode production && npm run copy",
-    "dev": "webpack --mode development",
-    "copy": "/bin/sh ./copy.sh"
+    "prod": "webpack --mode production",
+    "dev": "webpack --mode development"
   },
   "bugs": {
     "url": "https://github.com/bayareawebpro/ckeditor5/issues"

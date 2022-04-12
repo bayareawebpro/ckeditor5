@@ -3,7 +3,7 @@ import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
 export default class PluginFactory extends Plugin {
 
     init() {
-        const plugins = this.editor.config.get('makePlugins')
+        const plugins = this.editor.config.get('makePlugins') || {}
 
         Object.entries(plugins).map(([key, value])=>{
 
