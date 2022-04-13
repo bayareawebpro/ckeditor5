@@ -13,24 +13,23 @@ Includes custom plugins for setting up external methods to insert content into t
 > https://github.com/ckeditor/ckeditor5-vue
 
 ```vue
-
 <script>
 import {Editor} from '@bayareawebpro/ckeditor5-classic-custom'
-
 export default {
   data() {
     return {
       editor: Editor,
       content: '<p>Content of the editor.</p>',
       config: {
-        insertLinks: {
-          handler: (write) => write({title: 'Custom Link', url: '/my-url/'})
-        },
-        insertImages: {
-          handler: (write) => write({url: 'https://images.unsplash.com/photo-1593642533144-3d62aa4783ec'})
-        },
-        insertSnippets: {
-          handler: (write) => write('<figure class="image"><img src="https://images.unsplash.com/photo-1593642533144-3d62aa4783ec"></figure>')
+        // Create a new UI Button & Handler
+        createPlugins: {
+          myPlugin: {
+            label: `Click Me`,
+            icon: `<svg>...`,
+            execute: (editor) => {
+              editor.model.insertContent(editor.data.toModel(editor.data.processor.toView(html)))
+            }
+          }
         },
         toolbar: {
           items: [
@@ -53,9 +52,6 @@ export default {
             'htmlEmbed',
             'insertTable',
             'mediaEmbed',
-            'insertLinks',
-            'insertImages',
-            'insertSnippets',
             '|',
             'undo',
             'redo'
@@ -74,3 +70,7 @@ export default {
   />
 </template>
 ```
+
+## Vendor Docs
+- https://ckeditor.com/docs/ckeditor5/latest/installation/getting-started/quick-start.html
+- https://webpack.js.org/plugins/terser-webpack-plugin/

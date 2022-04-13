@@ -43,6 +43,7 @@ import PluginFactory from './plugins/PluginFactory'
 class Editor extends ClassicEditorBase {}
 Editor.defaultConfig = {
 	language: 'en',
+	isReadOnly:false,
 	...require('./config/link').default,
 	...require('./config/html').default,
 	...require('./config/image').default,
@@ -56,34 +57,38 @@ Editor.builtinPlugins = [
 	PluginFactory,
 	Essentials,
 	Link,
-	LinkImage,
 	Bold,
 	List,
 	Italic,
 	Indent,
-	Heading,
-	Paragraph,
-	Underline,
 	Alignment,
-	BlockQuote,
+	Underline,
 	Subscript,
 	Superscript,
 	StrikeThrough,
+
+	Heading,
+	Paragraph,
+	BlockQuote,
 	HorizontalLine,
-	AutoFormat,
-	PasteFromOffice,
+
 	Table,
 	TableToolbar,
 	TableProperties,
 	TableCellProperties,
+
 	Image,
 	ImageResize,
 	ImageStyle,
 	ImageCaption,
 	ImageToolbar,
 	ImageTextAlternative,
+	LinkImage,
+
 	MediaEmbed,
-	HtmlEmbed
+	HtmlEmbed,
+	PasteFromOffice,
+	AutoFormat,
 ]
 
 export default {

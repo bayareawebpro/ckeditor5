@@ -5,7 +5,7 @@ export default {
     image:{
         toolbar: [
             'resizeImage',
-            'imageStyle:full',
+            'imageStyle:block',
             'imageStyle:alignLeft',
             'imageStyle:alignCenter',
             'imageStyle:alignRight',
@@ -13,7 +13,7 @@ export default {
             'linkImage',
         ],
         styles: [
-            'full',
+            'block',
             'alignLeft',
             'alignCenter',
             'alignRight',
