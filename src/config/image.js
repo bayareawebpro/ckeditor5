@@ -10,6 +10,7 @@ export default {
             'imageStyle:alignCenter',
             'imageStyle:alignRight',
             'imageTextAlternative',
+            'toggleImageCaption',
             'linkImage',
         ],
         styles: [

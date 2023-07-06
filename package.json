@@ -46,7 +46,7 @@
     "webpack-cli": "^4.9.2"
   },
   "scripts": {
-    "prod": "webpack --mode production",
+    "prod": "webpack --mode production && ./copy.sh",
     "dev": "webpack --mode development && ./copy.sh"
   },
   "bugs": {
