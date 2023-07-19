@@ -39,8 +39,7 @@ import AutoFormat from '@ckeditor/ckeditor5-autoformat/src/autoformat'
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice'
 
 import PluginFactory from './plugins/PluginFactory'
-
-import SpanElement from "./plugins/SpanElement";
+import Span from "./plugins/Span";
 
 class Editor extends ClassicEditorBase {}
 Editor.defaultConfig = {
@@ -86,12 +85,12 @@ Editor.builtinPlugins = [
 	ImageToolbar,
 	ImageTextAlternative,
 	LinkImage,
+	Span,
 
 	MediaEmbed,
 	HtmlEmbed,
 	PasteFromOffice,
 	AutoFormat,
-	SpanElement,
 ]
 export default {
 	Editor,
