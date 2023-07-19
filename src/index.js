@@ -40,6 +40,8 @@ import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefrom
 
 import PluginFactory from './plugins/PluginFactory'
 
+import SpanElement from "./plugins/SpanElement";
+
 class Editor extends ClassicEditorBase {}
 Editor.defaultConfig = {
 	language: 'en',
@@ -89,8 +91,8 @@ Editor.builtinPlugins = [
 	HtmlEmbed,
 	PasteFromOffice,
 	AutoFormat,
+	SpanElement,
 ]
-
 export default {
 	Editor,
 }

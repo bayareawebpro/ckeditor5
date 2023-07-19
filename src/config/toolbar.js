@@ -6,10 +6,11 @@ export default {
             'link',
             'bold',
             'italic',
-            'subscript',
+            //'subscript',
             'superscript',
             'underline',
             'strikethrough',
+            'spanElement',
             'blockQuote',
             'bulletedList',
             'numberedList',
@@ -18,7 +19,8 @@ export default {
             'mediaEmbed',
             'htmlEmbed',
             'undo',
-            'redo'
+            'redo',
+            //'placeholder',
         ]
     },
 }

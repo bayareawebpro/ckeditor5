@@ -35,6 +35,8 @@
     "@ckeditor/ckeditor5-paste-from-office": "^34.0.0",
     "@ckeditor/ckeditor5-table": "^34.0.0",
     "@ckeditor/ckeditor5-theme-lark": "^34.0.0",
+    "@ckeditor/ckeditor5-utils": "^34.0.0",
+    "@ckeditor/ckeditor5-widget": "^34.0.0",
     "@ckeditor/ckeditor5-ui": "^34.0.0",
     "css-loader": "^6.7.1",
     "postcss": "^8.4.12",
@@ -46,8 +48,8 @@
     "webpack-cli": "^4.9.2"
   },
   "scripts": {
-    "prod": "webpack --mode production && ./copy.sh",
-    "dev": "webpack --mode development && ./copy.sh"
+    "prod": "webpack --mode production",
+    "dev": "webpack --mode development"
   },
   "bugs": {
     "url": "https://github.com/bayareawebpro/ckeditor5/issues"
